@@ -12,7 +12,6 @@ const HOLESKY_EP_ADDRESS_V0_7 = "0x0000000071727de22e5e9d8baf0edac6f37da032";
 // TODO send the initialization user-operation to the entrypoint letting it know that our account is not deployed yet, and the calldata to be invoked to successfully deploy it
 
 async function main() {
-  // const [me] = await hre.ethers.getSigners();
   const accounts = config.networks.hardhat.accounts;
   const me = (Array.isArray(accounts) ?
     new Wallet(accounts[0].privateKey) :
